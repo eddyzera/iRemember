@@ -1,5 +1,7 @@
 import React from 'react'
 import Header from '../../components/header'
+import BannerLogin from '../../assets/svg/banner-login.svg'
+
 export const Login: React.FC = () => {
   return (
     <>
@@ -13,6 +15,7 @@ export const Login: React.FC = () => {
               dia, uma forma simples sem complicações.
             </p>
           </div>
+          <img src={BannerLogin} alt="Banner Logo" />
         </div>
       </div>
     </>

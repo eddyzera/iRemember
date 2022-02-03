@@ -1,6 +1,36 @@
 @use '../utils' as *;
 
 .login {
-  background: map-get($white , '100' );
-  height: 100vh;
+  background: map-get($white , '50' );
+  height: calc(100vh - 80px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+
+    .login-content {
+      max-width: 50rem;
+      align-self: baseline;
+
+      h2 {
+        font-size: 4.8rem;
+        line-height: 5rem;
+      }
+
+      p {
+        margin-top: 3rem;
+        font-size: 2.2rem;
+        color: map-get($black , '50' );
+      }
+    }
+
+    img {
+      justify-self: flex-end;
+    }
+  }
 }

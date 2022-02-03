@@ -9,8 +9,8 @@ export const Header: React.FC = () => {
         <h1>iRemember</h1>
       </div>
       <div className="header__button">
-        <button className="login">entrar</button>
-        <button className="register">cadastrar</button>
+        <a className="login">entrar</a>
+        <a className="register">cadastrar</a>
       </div>
     </header>
   )
