@@ -1,0 +1,57 @@
+@use '../utils' as *;
+
+.header {
+  background: map-get($white , '50' );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+
+  &__button {
+    padding-right: 1rem;
+    width: 23rem;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: 10rem;
+      height: 3rem;
+
+      &.login {
+        background: map-get($blue , '50' );
+        color: map-get($white , '100' );
+
+        &:hover {
+          background: map-get($blue , '150' );
+        }
+      }
+
+      &.register {
+        background: map-get($white , '50' );
+        color: map-get($blue , '50' );
+        border: 1px solid map-get($blue , '50' );
+
+        &:hover {
+          background: map-get($blue , '150' );
+          color:  map-get($white , '50' );
+        }
+      }
+    }
+  }
+}

@@ -8,11 +8,19 @@
 
 body {
   font-family: 'Nunito', sans-serif;
-  background: map-get($white , '100' );
   color: map-get($black , '100' );
 }
 
 h1, h2, h3, h4, h5 {
   font-weight: 500;
   color: map-get($black , '150' );
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  border-radius: 0.5rem;
 }
