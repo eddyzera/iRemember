@@ -1,0 +1,18 @@
+@use '../utils' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: map-get($white , '100' );
+  color: map-get($black , '100' );
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 500;
+  color: map-get($black , '150' );
+}
