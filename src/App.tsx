@@ -1,8 +1,8 @@
 import React from 'react'
-import Login from './pages/login'
 
+import { ProviderRouter } from './provider/routes'
 function App() {
-  return <Login />
+  return <ProviderRouter />
 }
 
 export default App
