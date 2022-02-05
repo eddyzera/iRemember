@@ -44,6 +44,7 @@
       &.login {
         background: map-get($blue , '50' );
         color: map-get($white , '100' );
+        transition: all 0.6s;
 
         &:hover {
           background: map-get($blue , '150' );
@@ -54,6 +55,7 @@
         background: map-get($white , '50' );
         color: map-get($blue , '50' );
         border: 1px solid map-get($blue , '50' );
+        transition: all 0.6s;
 
         &:hover {
           background: map-get($blue , '150' );

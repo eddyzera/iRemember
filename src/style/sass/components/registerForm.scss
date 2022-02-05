@@ -1,0 +1,90 @@
+@use '../utils' as *;
+
+.register-form {
+  background-color: map-get($white , '50');
+  width: 35rem;
+  height: 40rem;
+  padding: 1rem 5rem;
+  border-radius: 0.5rem;
+
+  form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .register-input-group {
+      width: 100%;
+      height: 2.5rem;
+      background-color: #fbfbfb;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      padding-left: 1rem;
+      border-radius: 0.4rem;
+
+      input {
+        margin-left: 1rem;
+        flex: 1;
+        border: none;
+        outline: none;
+        height: 100%;
+        background: transparent;
+        font-size: 0.9rem;
+        font-weight: 400;
+      }
+    }
+
+    .register-button {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+
+      &__create {
+        grid-column: span 2;
+        background-color: map-get($white , '50' );
+        color: map-get($blue , '50' );
+        border: 1px solid map-get($blue , '50' );
+        transition: all 0.6s;
+
+        &:hover {
+          background: map-get($blue , '150' );
+          color:  map-get($white , '50' );
+        }
+      }
+
+      &__facebook {
+        background-color: #3B5998;
+        color: map-get($white , '50' );
+
+        .register-button-group {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 1rem;
+
+          svg {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+
+      &__google {
+        background-color: #db4437;
+        color: map-get($white , '50' );
+        .register-button-group {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 1rem;
+
+          svg {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import LogoTipo from '../../assets/svg/logo-tipo.svg'
 
 export const Header: React.FC = () => {
@@ -10,7 +11,9 @@ export const Header: React.FC = () => {
       </div>
       <div className="header__button">
         <a className="login">entrar</a>
-        <a className="register">cadastrar</a>
+        <Link to="/register">
+          <a className="register">cadastrar</a>
+        </Link>
       </div>
     </header>
   )
