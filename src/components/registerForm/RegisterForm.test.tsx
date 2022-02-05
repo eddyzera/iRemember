@@ -1,16 +1,11 @@
 import React from 'react'
 import '@testing-library/jest-dom'
-import { BrowserRouter } from 'react-router-dom'
-import { render } from '@testing-library/react'
+import { render } from '../../utils/tests/customRender'
 import RegisterForm from './index'
 
 describe('<RegisterForm />', () => {
   it('should render component RegisterForm without errros', () => {
-    const result = render(
-      <BrowserRouter>
-        <RegisterForm />
-      </BrowserRouter>
-    )
+    const result = render(<RegisterForm />)
     expect(result.container.querySelector('.register-form'))
   })
 })

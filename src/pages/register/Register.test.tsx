@@ -1,16 +1,11 @@
 import React from 'react'
 import '@testing-library/jest-dom'
-import { BrowserRouter } from 'react-router-dom'
-import { render } from '@testing-library/react'
+import { render } from '../../utils/tests/customRender'
 import Register from './index'
 
 describe('<Register />', () => {
   it('should render page Register without errors', () => {
-    const result = render(
-      <BrowserRouter>
-        <Register />
-      </BrowserRouter>
-    )
+    const result = render(<Register />)
     expect(result.container.querySelector('.register')).toBeInTheDocument()
   })
 })
