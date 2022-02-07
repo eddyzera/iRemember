@@ -1,7 +1,8 @@
 import React from 'react'
-import { MdAlternateEmail, MdVpnKey } from 'react-icons/md'
+import { MdAlternateEmail, MdFacebook, MdVpnKey } from 'react-icons/md'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { ILoginForm } from './types'
+import { AiOutlineGoogle } from 'react-icons/ai'
 export const LoginForm: React.FC = () => {
   const {
     register,
@@ -14,6 +15,8 @@ export const LoginForm: React.FC = () => {
   return (
     <div className="login-form">
       <form onSubmit={handleSubmit(onSubmit)}>
+        <h2>Falta muito pouco para começarmos !</h2>
+        <p>Como deseja Entrar ?</p>
         <div className="register-input-group">
           <MdAlternateEmail color="#8a939b" />
           <input
@@ -29,6 +32,23 @@ export const LoginForm: React.FC = () => {
             placeholder="Digite o seu password..."
             {...register('password', { required: true })}
           />
+        </div>
+        <div className="login-button">
+          <button className="login-button__login" type="submit">
+            Enviar
+          </button>
+          <button className="login-button__facebook">
+            <div className="login-button-group">
+              <MdFacebook size="1.5rem" color="#FFF" />
+              facebook
+            </div>
+          </button>
+          <button className="login-button__google">
+            <div className="login-button-group">
+              <AiOutlineGoogle size="1.5rem" color="#FFF" />
+              google
+            </div>
+          </button>
         </div>
       </form>
     </div>

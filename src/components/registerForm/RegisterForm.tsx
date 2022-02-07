@@ -23,6 +23,8 @@ export const RegisterForm: React.FC = () => {
   return (
     <div className="register-form">
       <form onSubmit={handleSubmit(onSubmit)}>
+        <h2>Falta muito pouco para começarmos !</h2>
+        <p>Como deseja se Cadastrar ?</p>
         <div
           className={`register-input-group ${errors.name?.type ? 'error' : ''}`}
         >
