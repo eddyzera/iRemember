@@ -20,7 +20,6 @@ export const RegisterForm: React.FC = () => {
   const onSubmit: SubmitHandler<IRegisterForm> = (data) => {
     console.log('data', data)
   }
-  console.log(errors.name?.type)
   return (
     <div className="register-form">
       <form onSubmit={handleSubmit(onSubmit)}>
