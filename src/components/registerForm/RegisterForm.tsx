@@ -33,6 +33,7 @@ export const RegisterForm: React.FC = () => {
             {...register('name', { required: true })}
           />
         </div>
+        <small>{errors.name?.message}</small>
         <div className="register-input-group">
           <MdAlternateEmail color="#8a939b" />
           <input
@@ -41,6 +42,7 @@ export const RegisterForm: React.FC = () => {
             {...register('email', { required: true })}
           />
         </div>
+        <small>{errors.email?.message}</small>
         <div className="register-input-group">
           <MdVpnKey color="#8a939b" />
           <input
@@ -49,6 +51,7 @@ export const RegisterForm: React.FC = () => {
             {...register('password', { required: true })}
           />
         </div>
+        <small>{errors.password?.message}</small>
         <div className="register-input-group">
           <MdVpnKey color="#8a939b" />
           <input
@@ -57,6 +60,7 @@ export const RegisterForm: React.FC = () => {
             {...register('passwordConfirme', { required: true })}
           />
         </div>
+        <small>{errors.passwordConfirme?.message}</small>
         <div className="register-button">
           <button className="register-button__create" type="submit">
             Criar
