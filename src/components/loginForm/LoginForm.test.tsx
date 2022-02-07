@@ -6,7 +6,7 @@ import LoginForm from './index'
 describe('<LoginForm />', () => {
   it('should render component LoginForm without errors', () => {
     const result = render(<LoginForm />)
-    
-    expect(result.container.querySelector('.login-enter')).toBeInTheDocument()
+
+    expect(result.container.querySelector('.login-form')).toBeInTheDocument()
   })
 })
