@@ -18,14 +18,15 @@ export const RegisterForm: React.FC = () => {
     formState: { errors }
   } = useForm<IRegisterForm>({ resolver: yupResolver(schema) })
   const onSubmit: SubmitHandler<IRegisterForm> = (data) => {
-    if (data.password !== data.passwordConfirme) {
-      console.log('error')
-    }
+    console.log('data', data)
   }
+  console.log(errors.name?.type)
   return (
     <div className="register-form">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="register-input-group">
+        <div
+          className={`register-input-group ${errors.name?.type ? 'error' : ''}`}
+        >
           <MdPerson color="#8a939b" />
           <input
             type="text"
@@ -34,7 +35,11 @@ export const RegisterForm: React.FC = () => {
           />
         </div>
         <small>{errors.name?.message}</small>
-        <div className="register-input-group">
+        <div
+          className={`register-input-group ${
+            errors.email?.type ? 'error' : ''
+          }`}
+        >
           <MdAlternateEmail color="#8a939b" />
           <input
             type="email"
@@ -43,7 +48,11 @@ export const RegisterForm: React.FC = () => {
           />
         </div>
         <small>{errors.email?.message}</small>
-        <div className="register-input-group">
+        <div
+          className={`register-input-group ${
+            errors.password?.type ? 'error' : ''
+          }`}
+        >
           <MdVpnKey color="#8a939b" />
           <input
             type="password"
@@ -52,7 +61,11 @@ export const RegisterForm: React.FC = () => {
           />
         </div>
         <small>{errors.password?.message}</small>
-        <div className="register-input-group">
+        <div
+          className={`register-input-group ${
+            errors.passwordConfirme?.type ? 'error' : ''
+          }`}
+        >
           <MdVpnKey color="#8a939b" />
           <input
             type="password"
