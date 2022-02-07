@@ -6,6 +6,6 @@ describe('<Enter />', () => {
   it('should render page without erros', () => {
     const result = render(<Enter />)
 
-    expect(result.container.querySelector('.enter'))
+    expect(result.container.querySelector('.enter')).toBeInTheDocument()
   })
 })
