@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
 import {
   MdPerson,
   MdAlternateEmail,
@@ -8,13 +9,14 @@ import {
 } from 'react-icons/md'
 import { AiOutlineGoogle } from 'react-icons/ai'
 import { IRegisterForm } from './types'
+import { schema } from './validations'
 
 export const RegisterForm: React.FC = () => {
   const {
     register,
     handleSubmit,
     formState: { errors }
-  } = useForm<IRegisterForm>()
+  } = useForm<IRegisterForm>({ resolver: yupResolver(schema) })
   const onSubmit: SubmitHandler<IRegisterForm> = (data) => {
     if (data.password !== data.passwordConfirme) {
       console.log('error')
