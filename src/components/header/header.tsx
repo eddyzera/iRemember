@@ -10,7 +10,9 @@ export const Header: React.FC = () => {
         <h1>iRemember</h1>
       </div>
       <div className="header__button">
-        <a className="login">entrar</a>
+        <Link to="/enter">
+          <a className="login">entrar</a>
+        </Link>
         <Link to="/register">
           <a className="register">cadastrar</a>
         </Link>
