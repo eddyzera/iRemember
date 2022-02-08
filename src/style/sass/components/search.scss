@@ -1,0 +1,40 @@
+@use '../utils' as *;
+
+.search {
+  max-width: 40.625rem;
+  display: flex;
+  align-items: center;
+  background-color: map-get($white , '50');
+  border-radius: 0.5rem;
+
+  input {
+    background: none;
+    flex: 1;
+    height: 100%;
+    padding: 0.5rem 2rem;
+    border: none;
+    outline: none;
+  }
+
+  button {
+    width: 5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: map-get($white , '50');
+    transition: ease 0.4s;
+
+    svg {
+      color: map-get($black , '100');
+    }
+
+    &:hover {
+      background-color: #0678eb2e;
+
+      svg {
+        color: map-get($blue , '50');
+      }
+    }
+  }
+}

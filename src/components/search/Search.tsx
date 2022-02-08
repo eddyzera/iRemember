@@ -6,7 +6,7 @@ export const Search: React.FC = () => {
     <div className="search">
       <input type="text" placeholder="Pesquise..." />
       <button type="submit">
-        <MdSearch color="#353840" />
+        <MdSearch size="1rem" />
       </button>
     </div>
   )
