@@ -1,0 +1,9 @@
+@use '../utils' as *;
+
+.home {
+  background: map-get($white , '100' );
+  height: calc(100vh - 80px);
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 2fr
+}
