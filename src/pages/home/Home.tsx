@@ -1,4 +1,5 @@
 import React from 'react'
+import Aside from '../../components/aside'
 import Header from '../../components/header'
 import Search from '../../components/search'
 
@@ -7,7 +8,7 @@ export const Home: React.FC = () => {
     <>
       <Header isLogged={true} />
       <div className="home">
-        <aside>topics</aside>
+        <Aside />
         <main>
           <Search />
         </main>
