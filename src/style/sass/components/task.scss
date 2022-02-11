@@ -1,0 +1,73 @@
+@use '../utils' as *;
+
+.task {
+  background: map-get($white, '50');
+  max-width: 40.625rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  
+
+  .task-container {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+
+    h2 {
+      font-size: 1.9rem;
+    }
+
+    .task-category {
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+
+      p {
+        background: map-get($blue , '100');
+        padding: 0.2rem;
+        color: map-get($white, '50');
+        border-radius: 0.5rem;
+      }
+
+      p + p {
+        margin-left: 0.5rem;
+      }
+    }
+
+    .task-list {
+      margin-bottom: 1rem;
+
+      &__item {
+        list-style: none;
+      }
+
+      li + li {
+        margin-top: 1rem;
+      }
+    }
+
+    .task-date {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      button {
+        width: 10rem;
+        background: map-get($white, '50');
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: lowercase;
+        transition: all 0.4s;
+
+        &:hover {
+          color: map-get($blue, '100' );
+        }
+      }
+
+      &__date-event {
+        text-align: left;
+      }
+    }
+  }
+}
