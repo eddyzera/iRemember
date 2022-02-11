@@ -1,7 +1,7 @@
 @use '../utils' as *;
 
 .header {
-  background: map-get($white , '50' );
+  background: map-get($white, '50');
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,12 +15,12 @@
     a {
       display: flex;
       align-items: center;
-      
+
       img {
         width: 4rem;
         height: 4rem;
       }
-  
+
       h1 {
         font-size: 1.5rem;
         font-weight: 700;
@@ -47,24 +47,123 @@
       height: 3rem;
 
       &.login {
-        background: map-get($blue , '50' );
-        color: map-get($white , '100' );
+        background: map-get($blue, '50');
+        color: map-get($white, '100');
         transition: all 0.6s;
 
         &:hover {
-          background: map-get($blue , '150' );
+          background: map-get($blue, '150');
         }
       }
 
       &.register {
-        background: map-get($white , '50' );
-        color: map-get($blue , '50' );
-        border: 1px solid map-get($blue , '50' );
+        background: map-get($white, '50');
+        color: map-get($blue, '50');
+        border: 1px solid map-get($blue, '50');
         transition: all 0.6s;
 
         &:hover {
-          background: map-get($blue , '150' );
-          color:  map-get($white , '50' );
+          background: map-get($blue, '150');
+          color: map-get($white, '50');
+        }
+      }
+    }
+  }
+
+  .header-logged {
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+
+    &__notification {
+      margin: 0 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.5rem;
+      width: 2.5rem;
+      transition: ease 0.4s;
+
+      svg {
+        color: map-get($black, '50');
+        font-size: 1.5rem;
+      }
+
+      &:hover {
+        background-color: #0678eb2e;
+        border-radius: 0.5rem;
+
+        svg {
+          color: map-get($blue, '50');
+        }
+      }
+    }
+
+    &__create {
+      width: 10rem;
+      background-color: map-get($white, '50');
+      color: map-get($blue, '50');
+      border: 1px solid map-get($blue, '50');
+      transition: all 0.6s;
+
+      &:hover {
+        background: map-get($blue, '150');
+        color: map-get($white, '50');
+      }
+    }
+
+    &__perfil {
+      position: relative;
+      .header-perfil {
+        background: none;
+        img {
+          border-radius: 100%;
+          width: 2.5rem;
+          height: 2.5rem;
+
+          &:hover {
+            -webkit-box-shadow: 0 0px 0px 6px #edecec;
+            box-shadow: 0 0px 0px 6px #edecec;
+          }
+        }
+      }
+
+      .header-menu {
+        padding: 0 0.5rem;
+        position: absolute;
+        background-color: map-get($white, '50');
+        right: 0rem;
+        top: 3.5rem;
+        width: 15rem;
+        border: 0.1rem solid #35384040;
+        border-radius: 0.5rem;
+
+        li {
+          list-style: none;
+          padding: 1rem;
+          margin: 0.5rem 0;
+
+          a {
+            color: map-get($black ,'100' );
+          }
+
+          button {
+            width: 100%;
+            text-align: left;
+            background: none;
+          }
+
+          &:hover {
+            padding: 1rem;
+            background-color: map-get($white, '100');
+            border-radius: 0.5rem;
+          }
+        }
+
+        .separator {
+          height: 0.1rem;
+          margin: 0.5rem 0;
+          background-color: #35384012;
         }
       }
     }
