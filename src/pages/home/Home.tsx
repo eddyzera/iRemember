@@ -2,6 +2,7 @@ import React from 'react'
 import Aside from '../../components/aside'
 import Header from '../../components/header'
 import Search from '../../components/search'
+import Task from '../../components/task'
 
 export const Home: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ export const Home: React.FC = () => {
         <Aside />
         <main>
           <Search />
+          <Task />
         </main>
       </div>
     </>
