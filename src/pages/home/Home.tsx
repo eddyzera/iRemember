@@ -13,6 +13,9 @@ export const Home: React.FC = () => {
         <main>
           <Search />
           <Task />
+          <Task />
+          <Task />
+          <Task />
         </main>
       </div>
     </>
